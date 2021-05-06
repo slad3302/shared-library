@@ -3,4 +3,5 @@
 
 def call(obj){
   println "$obj"
+  println "$game"
 }
