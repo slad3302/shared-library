@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
 
-def call(){
-  println "Madrid"
+def call(obj){
+  println "$obj"
 }
