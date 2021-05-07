@@ -13,7 +13,3 @@ def su(a1){
 def susu(q1, q2){
     return "Namaste $q1 adnd $q2"
 }
-
-def noooo(){
-    println "calling from noooo $any_env"
-}
