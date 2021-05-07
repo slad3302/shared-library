@@ -2,10 +2,6 @@
 
 def foo(obj1, obj2){
     cloud = "$obj1 + $obj2"
-    any_env = coo(cloud)
-}
-
-def coo(st){
-	return "hello $st"
+	println cloud
 }
 
