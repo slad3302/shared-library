@@ -9,6 +9,6 @@ def foo(obj1, obj2){
 def coo(st){
 	println "hello $st"
 }
-def soo(a1,a2){
+def soo(a1, a2){
    println "$a1 and $a2"
 }
