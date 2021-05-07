@@ -1,4 +1,4 @@
-#!/usr/bin/env groovy
+
 
 def foo(obj1, obj2){
     println "$obj1 $obj2"
