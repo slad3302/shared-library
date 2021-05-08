@@ -1,23 +1,20 @@
 #!/usr/bin/env groovy
-anypoint_environment='Dev'
-anypoint_runtime_version = '4.1.4'
-apps_info = [:]
 
-def generateAppsInfo(){
-    params.APPS.split("\\r?\\n").each { line ->
+def generateAppsInfo(apps, environment){
+    apps.split("\\r?\\n").each { line ->
         def app_info = line.split(',')
 
-        if (anypoint_environment == 'Dev'){
+        if (environment == 'Dev'){
             package_name = "${app_info[0]}"
-            anypoint_app_name = anypoint_environment.toLowerCase() + "-" + package_name + "-" + app_info[1]
+            anypoint_app_name = environment.toLowerCase() + "-" + package_name + "-" + app_info[1]
             version_number = ''
         } else {
             package_name = (app_info[0] =~ /(^.*-(proc|sys|exp)-api)/)[ 0 ][ 1 ]
             version_number = (app_info[0] =~ /(\d+\.\d+\.\d+)$/)[ 0 ][ 1 ]
-            anypoint_app_name = anypoint_environment.toLowerCase() + "-" + package_name + "-" + app_info[1]
+            anypoint_app_name = environment.toLowerCase() + "-" + package_name + "-" + app_info[1]
         }
 
-        app_properties_path =  "./" + anypoint_environment.toLowerCase() + "/"  + package_name + "-" + app_info[1] + ".json"
+        app_properties_path =  "./" + environment.toLowerCase() + "/"  + package_name + "-" + app_info[1] + ".json"
 
         apps_info[app_info[0]] = [
             app_release_number: app_info[1],
@@ -42,7 +39,7 @@ def foo(){
               println apps_info[app].app_region
               println apps_info[app].package_name
               println apps_info[app].version_number
-	      println apps_info[app].anypoint_app_name 
+			  println apps_info[app].anypoint_app_name 
               println apps_info[app].app_properties_path
 	}		  
 }
