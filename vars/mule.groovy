@@ -1,7 +1,4 @@
 #!/usr/bin/env groovy
-def anypoint_environment='Dev'
-def anypoint_runtime_version = '4.1.4'
-def apps_info = [:]
 
 def generateAppsInfo(){
     params.APPS.split("\\r?\\n").each { line ->
