@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
-apps_info = [:]
-def generateAppsInfo(apps, environment){
+
+def generateAppsInfo(apps, environment, apps_info){
     apps.split("\\r?\\n").each { line ->
         def app_info = line.split(',')
 
