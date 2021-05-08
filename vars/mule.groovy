@@ -42,7 +42,7 @@ def foo(){
               println apps_info[app].app_region
               println apps_info[app].package_name
               println apps_info[app].version_number
-			  println apps_info[app].anypoint_app_name 
+	      println apps_info[app].anypoint_app_name 
               println apps_info[app].app_properties_path
 	}		  
 }
