@@ -30,7 +30,7 @@ def generateAppsInfo(apps, environment, apps_info){
     }
 }
 
-def foo(){
+def foo(apps_info){
     apps_info.each{ app, info ->
             //apps_info[app].current_filename = downloadSnapJar(artifactory_user, artifactory_api_key, apps_info[app].package_name)
               println apps_info[app].app_release_number
