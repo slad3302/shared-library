@@ -6,5 +6,5 @@ def generateAppsInfo(ID, ON){
    println "$pg and $rg"	
 }
 def soo(){
-  println "Hell $pg"
+  println "Hell $ON"
 }
