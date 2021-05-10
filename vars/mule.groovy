@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-def generateAppsInfo(ID, ON){
-   pg = ID
-   rg = ON
+def generateAppsInfo(params.ARTIFACT_ID, params.REGION){
+   pg = params.ARTIFACT_ID
+   rg = params.REGION
    println "$pg and $rg"	
 }
