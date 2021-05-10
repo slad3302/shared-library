@@ -3,5 +3,5 @@
 def generateAppsInfo(ID, ON){
    pg = ID
    rg = ON
-   println $pg and $rg	
+   println "$pg and $rg"	
 }
