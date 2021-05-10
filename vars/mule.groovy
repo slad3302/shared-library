@@ -5,5 +5,6 @@ def foo(ob1, ob2){
 }
 def soo(){
    st1 = "demo"
-   foo(st1)    
+   st2 = "hai be"
+   foo(st1, st2)    
 }
